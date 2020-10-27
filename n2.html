@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+            align-content: flex-end;
+        }
+        span {
+            display:block;
+            font-size: 20pt;
+        }
+        .gh {
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1">
+    </div>
+    <script>
+        let s=``;
+        let pictures =[
+        {sr : "1.jpg", tx: "Персидский кот", w: 400, h: 400},
+      {sr: "2.jpg", tx:"Сиамский кот", w: "400px", h: 400},
+       {sr: "3.jpg", tx:"Мейн-Куйн", w: "400px", h: 400}
+        ];
+s=`<div class="gh"><span>${pictures[0].tx}</span><img src="img/${pictures[0].sr}" style="max-width: ${pictures[0].w}px; max-height: ${pictures[0].h}px;"></div>
+<div class="gh"><span>${pictures[1].tx}</span><img src="img/${pictures[1].sr}" style="max-width:  ${pictures[1].w};  max-height: ${pictures[1].h}px;"></div>
+<div class="gh"><span>${pictures[2].tx}</span><img src="img/${pictures[2].sr}" style="max-width:  ${pictures[2].w};  max-height: ${pictures[2].h}px;"></div>
+`;
+id1.innerHTML=s;
+    </script>
+</body>
+</html>
